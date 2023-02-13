@@ -1,0 +1,332 @@
+﻿<Window x:Class="EventDataMaker.AttendenceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventDataMaker"
+        mc:Ignorable="d"
+        Title="AttendenceWindow" Height="3330" Width="820">
+    <ScrollViewer>
+        <Grid>
+            <DatePicker x:Name="DateRec1" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="FirstDatePicker"/>
+            <DatePicker x:Name="DateRec2" HorizontalAlignment="Left" Margin="195,49,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="SecondDatePicker"/>
+            <ComboBox x:Name="SelectedEntryNr" HorizontalAlignment="Left" Margin="485,52,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SelectedEntryNr_SelectionChanged"/>
+            <Button Content="Search EntryNr" HorizontalAlignment="Left" Margin="350,49,0,0" VerticalAlignment="Top" Height="30" Width="120" FontSize="16" Background="#FF0F87F9" Click="Button_Click_1"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,119,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,119,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,119,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Label Content="AREA DE ENFASIS CAI" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Bold" FontSize="24"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,279,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,279,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,319,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,359,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,319,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,359,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,279,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,319,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,359,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Logros del mes" HorizontalAlignment="Left" Margin="375,119,0,0" VerticalAlignment="Top" Height="40" Width="180" FontSize="23" FontWeight="Bold" FontFamily="Segoe UI"/>
+            <Label Content="Acumulado" HorizontalAlignment="Left" Margin="615,119,0,0" VerticalAlignment="Top" Height="40" Width="135" FontSize="23" FontWeight="Bold" FontFamily="Segoe UI"/>
+            <Label Content="•Assessment de las colecciones" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Estudiantes" HorizontalAlignment="Left" Margin="90,359,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Administracion" HorizontalAlignment="Left" Margin="90,319,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Facultad" HorizontalAlignment="Left" Margin="90,279,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Participacion de la comunidad academica&#xD;&#xA;(total de recomendaciones)" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontStyle="Normal"/>
+            <Label Content="Prontuarrios cotejados" HorizontalAlignment="Left" Margin="90,199,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="EstudiantesAcumulado" HorizontalAlignment="Left" Margin="570,359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,240,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="ProntuariosCotejosMes" HorizontalAlignment="Left" Margin="355,199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AdministracionAcumulado" HorizontalAlignment="Left" Margin="570,319,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AdministracionMes" HorizontalAlignment="Left" Margin="355,319,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="EstudiantesMes" HorizontalAlignment="Left" Margin="355,359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ProntuariosCotejosAcumulado" HorizontalAlignment="Left" Margin="570,199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="FacultadAcumulado" HorizontalAlignment="Left" Margin="570,279,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <TextBox x:Name="ComunidadMes" HorizontalAlignment="Left" Margin="355,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ComunidadAcumulado" HorizontalAlignment="Left" Margin="570,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Label Content="Comunidad" HorizontalAlignment="Left" Margin="90,399,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="FacultadMes" HorizontalAlignment="Left" Margin="355,279,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,439,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,479,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,519,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Adquisiciones/Recursos nuevos(A+B)" HorizontalAlignment="Left" Margin="10,439,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Titulos" HorizontalAlignment="Left" Margin="90,479,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Volumenes" HorizontalAlignment="Left" Margin="90,519,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,439,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,439,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="TitulosMes" HorizontalAlignment="Left" Margin="355,479,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox HorizontalAlignment="Left" Margin="570,479,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesMes" HorizontalAlignment="Left" Margin="355,519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TitulosAcumulado" HorizontalAlignment="Left" Margin="570,479,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesAcumulado" HorizontalAlignment="Left" Margin="570,519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,559,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,559,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,559,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="A. Compras" HorizontalAlignment="Left" Margin="40,559,0,0" VerticalAlignment="Top" Height="40" Width="315" FontWeight="Normal" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,599,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,639,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Titulos" HorizontalAlignment="Left" Margin="90,599,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Volumenes" HorizontalAlignment="Left" Margin="90,639,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="TitulosMes2" HorizontalAlignment="Left" Margin="355,599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesMes2" HorizontalAlignment="Left" Margin="355,639,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TitulosAcumulado2" HorizontalAlignment="Left" Margin="570,599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesAcumulado2" HorizontalAlignment="Left" Margin="570,639,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,679,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,719,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,759,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="B. Donaciones" HorizontalAlignment="Left" Margin="40,679,0,0" VerticalAlignment="Top" Height="40" Width="315" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Titulos" HorizontalAlignment="Left" Margin="90,719,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Volumenes" HorizontalAlignment="Left" Margin="90,759,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,679,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,679,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="TitulosMes3" HorizontalAlignment="Left" Margin="355,719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesMes3" HorizontalAlignment="Left" Margin="355,759,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TitulosAcumulado3" HorizontalAlignment="Left" Margin="570,719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesAcumulado3" HorizontalAlignment="Left" Margin="570,759,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,799,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,839,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,879,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Crecimiento de las colecciones(catelogados)" HorizontalAlignment="Left" Margin="10,799,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="16"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,799,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,799,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Label Content="Titulos" HorizontalAlignment="Left" Margin="90,839,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Volumenes" HorizontalAlignment="Left" Margin="90,879,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="TitulosMes4" HorizontalAlignment="Left" Margin="355,839,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesMes4" HorizontalAlignment="Left" Margin="355,879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TitulosAcumulado4" HorizontalAlignment="Left" Margin="570,839,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesAcumulado4" HorizontalAlignment="Left" Margin="570,879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,919,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,959,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,999,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1039,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1079,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1119,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Mantenimiento de las colecciones" HorizontalAlignment="Left" Margin="10,919,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="•Encuardernaciones (volumenes procesados)" HorizontalAlignment="Left" Margin="10,959,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="17"/>
+            <Label Content="•Descarte" HorizontalAlignment="Left" Margin="40,999,0,0" VerticalAlignment="Top" Height="40" Width="315" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Titulos" HorizontalAlignment="Left" Margin="90,1039,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Volumenes" HorizontalAlignment="Left" Margin="90,1079,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Otros" HorizontalAlignment="Left" Margin="40,1119,0,0" VerticalAlignment="Top" Height="40" Width="315" FontWeight="Normal" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,919,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,919,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,959,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="EncuadernacionesAcumulado" HorizontalAlignment="Left" Margin="570,959,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,999,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,999,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,1119,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="TitulosMes5" HorizontalAlignment="Left" Margin="355,1039,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesMes5" HorizontalAlignment="Left" Margin="355,1079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="VolumenesAcumulado5" HorizontalAlignment="Left" Margin="570,1079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TitulosAcumulado5" HorizontalAlignment="Left" Margin="570,1039,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1159,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1199,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1239,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,1159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,1159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="AdquiridosMes" HorizontalAlignment="Left" Margin="355,1199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="EvaluadosMes" HorizontalAlignment="Left" Margin="355,1239,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AdquiridosAcumulado" HorizontalAlignment="Left" Margin="570,1199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="EvaluadosAcumulado" HorizontalAlignment="Left" Margin="570,1239,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Label Content="•Recursos virtuales de infromacion" HorizontalAlignment="Left" Margin="10,1159,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Adquiridos" HorizontalAlignment="Left" Margin="90,1199,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Evaluados para compra" HorizontalAlignment="Left" Margin="90,1239,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1279,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1319,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1359,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1399,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Acceso a la infromacion" HorizontalAlignment="Left" Margin="10,1279,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Pagina de Web" HorizontalAlignment="Left" Margin="90,1319,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Indizacion" HorizontalAlignment="Left" Margin="90,1359,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Recursos Audiovisuales" HorizontalAlignment="Left" Margin="10,1399,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,1279,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,1399,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,1279,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,1399,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="PaginaMes" HorizontalAlignment="Left" Margin="355,1319,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="IndizacionMes" HorizontalAlignment="Left" Margin="355,1359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PaginaAcumulado" HorizontalAlignment="Left" Margin="570,1319,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="IndizacionAcumulado" HorizontalAlignment="Left" Margin="570,1359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Label Content="Digitalizados" HorizontalAlignment="Left" Margin="90,1439,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1439,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1479,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1519,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Reparados" HorizontalAlignment="Left" Margin="90,1479,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Producidos" HorizontalAlignment="Left" Margin="90,1519,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="DigitalizadosMes" HorizontalAlignment="Left" Margin="355,1439,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ReparadosMes" HorizontalAlignment="Left" Margin="355,1479,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ProducidosMes" HorizontalAlignment="Left" Margin="355,1519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="DigitalizadosAcumulado" HorizontalAlignment="Left" Margin="570,1439,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ReparadosAcumulado" HorizontalAlignment="Left" Margin="570,1479,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ProducidosAcumulado" HorizontalAlignment="Left" Margin="570,1519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1559,0,0" Stroke="Black" VerticalAlignment="Top" Width="775"/>
+            <Label Content="DESTREZAS PARA EL MANEJO DE LA INFORMACION" HorizontalAlignment="Left" Margin="10,1559,0,0" VerticalAlignment="Top" Height="40" Width="560" FontWeight="Bold" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1599,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1639,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1679,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1719,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1759,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1799,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Talleres: Estudiantes" HorizontalAlignment="Left" Margin="10,1599,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="•Talleres: Facultad" HorizontalAlignment="Left" Margin="10,1679,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="•Talleres: Administracion" HorizontalAlignment="Left" Margin="10,1759,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Participantes" HorizontalAlignment="Left" Margin="90,1639,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Participantes" HorizontalAlignment="Left" Margin="90,1719,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Participantes" HorizontalAlignment="Left" Margin="90,1799,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="TalleresEstudiantesMes" HorizontalAlignment="Left" Margin="355,1599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesMes" HorizontalAlignment="Left" Margin="355,1639,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresFacultadMes" HorizontalAlignment="Left" Margin="355,1679,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesMes2" HorizontalAlignment="Left" Margin="355,1719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresAdministracionMes" HorizontalAlignment="Left" Margin="355,1759,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesMes3" HorizontalAlignment="Left" Margin="355,1799,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresEstudiantesAcumulado" HorizontalAlignment="Left" Margin="570,1599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesAcumulado" HorizontalAlignment="Left" Margin="570,1639,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresFacultadAcumulado" HorizontalAlignment="Left" Margin="570,1679,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesAcumulado2" HorizontalAlignment="Left" Margin="570,1719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresAdministracionAcumulado" HorizontalAlignment="Left" Margin="570,1759,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ParticipantesAcumulado3" HorizontalAlignment="Left" Margin="570,1799,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1839,0,0" Stroke="Black" VerticalAlignment="Top" Width="775"/>
+            <Label Content="USO DE LOS RECURSOS Y FACILIDADES" HorizontalAlignment="Left" Margin="10,1839,0,0" VerticalAlignment="Top" Height="40" Width="560" FontWeight="Bold" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1879,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1919,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1959,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,1999,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2039,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2079,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Uso de los recursos" HorizontalAlignment="Left" Margin="10,1879,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Estudiantes" HorizontalAlignment="Left" Margin="90,1919,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Facultad" HorizontalAlignment="Left" Margin="90,1959,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Administracion" HorizontalAlignment="Left" Margin="90,1999,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Uso de las Facilidades" HorizontalAlignment="Left" Margin="10,2039,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Sala de Estudio Grupal(3 salas)" HorizontalAlignment="Left" Margin="75,2079,0,0" VerticalAlignment="Top" Height="40" Width="280" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="recursosMes" HorizontalAlignment="Left" Height="40" Margin="355,1879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="recursosAcumulado" HorizontalAlignment="Left" Height="40" Margin="570,1879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2039,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2039,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="EstudiantesMes2" HorizontalAlignment="Left" Margin="355,1919,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="EstudiantesAcumulado2" HorizontalAlignment="Left" Margin="570,1919,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="FacultadMes2" HorizontalAlignment="Left" Margin="355,1959,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AdministracionMes2" HorizontalAlignment="Left" Margin="355,1999,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="FacultadAcumulado2" HorizontalAlignment="Left" Margin="570,1959,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AdministracionAcumulado2" HorizontalAlignment="Left" Margin="570,1999,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="SalasGrupalMes" HorizontalAlignment="Left" Margin="355,2079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="SalasGrupalAcumulado" HorizontalAlignment="Left" Margin="570,2079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2119,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2159,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2199,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2239,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Sala de Proyecciones" HorizontalAlignment="Left" Margin="75,2119,0,0" VerticalAlignment="Top" Height="40" Width="280" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Prestamos Inter Bibliotecarios" HorizontalAlignment="Left" Margin="10,2159,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Prestados" HorizontalAlignment="Left" Margin="90,2199,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Solicitados" HorizontalAlignment="Left" Margin="90,2239,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <TextBox x:Name="SalasProyeccionesMes" HorizontalAlignment="Left" Margin="355,2119,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="SalasProyeccionesAcumulado" HorizontalAlignment="Left" Margin="570,2119,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PrestadosMes" HorizontalAlignment="Left" Margin="355,2199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="SolicitadosMes" HorizontalAlignment="Left" Margin="355,2239,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PrestadosAcumulado" HorizontalAlignment="Left" Margin="570,2199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="SolicitadosAcumulado" HorizontalAlignment="Left" Margin="570,2239,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2279,0,0" Stroke="Black" VerticalAlignment="Top" Width="775"/>
+            <Label Content="OTROS ASPECTOS DEL SERVICIOS" HorizontalAlignment="Left" Margin="10,2279,0,0" VerticalAlignment="Top" Height="40" Width="560" FontWeight="Bold" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2319,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2359,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2399,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2439,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Horario" HorizontalAlignment="Left" Margin="10,2319,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Asistencia" HorizontalAlignment="Left" Margin="90,2359,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Horas de servicio" HorizontalAlignment="Left" Margin="90,2399,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Promedio de assistencia por hr." HorizontalAlignment="Left" Margin="90,2439,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="19" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2319,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2319,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="AsistenciaMes" HorizontalAlignment="Left" Margin="355,2359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="HorasServicioMes" HorizontalAlignment="Left" Margin="355,2399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PromediosMes" HorizontalAlignment="Left" Margin="355,2439,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AsistenciaAcumulado" HorizontalAlignment="Left" Margin="570,2359,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="HorasServicioAcumulado" HorizontalAlignment="Left" Margin="570,2399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PromediosAcumulado" HorizontalAlignment="Left" Margin="570,2439,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2479,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2519,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2559,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2599,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2639,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2679,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2719,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Actividades" HorizontalAlignment="Left" Margin="10,2479,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Exposiciones" HorizontalAlignment="Left" Margin="90,2519,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Exhibiciones" HorizontalAlignment="Left" Margin="90,2559,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Otras" HorizontalAlignment="Left" Margin="90,2599,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Publicaciones nuevas" HorizontalAlignment="Left" Margin="90,2679,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Publicaciones distribuidas" HorizontalAlignment="Left" Margin="90,2719,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="•Prestamos a la comunidad externa" HorizontalAlignment="Left" Margin="10,2799,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <TextBox x:Name="ExposicionesMes" HorizontalAlignment="Left" Margin="355,2519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ExhibicionesMes" HorizontalAlignment="Left" Margin="355,2559,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="OtrasMes" HorizontalAlignment="Left" Margin="355,2599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PublicacionesNuevasMes" HorizontalAlignment="Left" Margin="355,2679,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PublicacionesDistribuidasMes" HorizontalAlignment="Left" Margin="355,2719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ExposicionesAcumulado" HorizontalAlignment="Left" Margin="570,2519,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="ExhibicionesAcumulado" HorizontalAlignment="Left" Margin="570,2559,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="OtrasAcumulado" HorizontalAlignment="Left" Margin="570,2599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PublicacionesNuevasAcumulado" HorizontalAlignment="Left" Margin="570,2679,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PublicacionesDistribuidasAcumulado" HorizontalAlignment="Left" Margin="570,2719,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2479,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2479,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2639,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2639,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2759,0,0" Stroke="Black" VerticalAlignment="Top" Width="775"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2799,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2839,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2879,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2919,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Promocion de Recursos y servicios" HorizontalAlignment="Left" Margin="10,2639,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="•Talleres y conferencias" HorizontalAlignment="Left" Margin="10,2839,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Talleres ofrecidos" HorizontalAlignment="Left" Margin="90,2879,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Total de Participantes" HorizontalAlignment="Left" Margin="90,2919,0,0" VerticalAlignment="Top" Height="40" Width="265" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Margin="355,2799,0,0" Stroke="Black" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresOfrecidosMes" HorizontalAlignment="Left" Margin="355,2879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TotalParticipantesMes" HorizontalAlignment="Left" Margin="355,2919,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="PrestamosExternaAcumulado" HorizontalAlignment="Left" Margin="570,2799,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TalleresOfrecidosAcumulado" HorizontalAlignment="Left" Margin="570,2879,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="TotalParticipantesAcumulado" HorizontalAlignment="Left" Margin="570,2919,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Label Content="USO DE LOS RECURSOS Y SERVICIOS" HorizontalAlignment="Left" Margin="10,2759,0,0" VerticalAlignment="Top" Height="40" Width="560" FontWeight="Bold" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2959,0,0" Stroke="Black" VerticalAlignment="Top" Width="775"/>
+            <Label Content="GERENCIA Y PLANTA FISICA:" HorizontalAlignment="Left" Margin="10,2959,0,0" VerticalAlignment="Top" Height="40" Width="560" FontWeight="Bold" FontSize="20"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,2999,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,3039,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,3079,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,3119,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="10,3159,0,0" Stroke="Black" VerticalAlignment="Top" Width="345"/>
+            <Label Content="•Desarollo de personal(talleres, seminarios, cursos, etc.)" HorizontalAlignment="Left" Margin="10,2999,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="13"/>
+            <Label Content="•Equipo" HorizontalAlignment="Left" Margin="10,3039,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="•Planta Fisica" HorizontalAlignment="Left" Margin="10,3159,0,0" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Normal" FontSize="20"/>
+            <Label Content="Anadido(comprado o donado)" HorizontalAlignment="Left" Margin="85,3079,0,0" VerticalAlignment="Top" Height="40" Width="270" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Decomisado**" HorizontalAlignment="Left" Margin="85,3119,0,0" VerticalAlignment="Top" Height="40" Width="270" FontWeight="Normal" FontSize="20" FontStyle="Italic"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2839,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,2839,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,2999,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,3039,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,3039,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <TextBox x:Name="DesarolloAcumulado" HorizontalAlignment="Left" Margin="570,2999,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AnadidoMes" HorizontalAlignment="Left" Margin="355,3079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="AnadidoAcumulado" HorizontalAlignment="Left" Margin="570,3079,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="DecomisadoMes" HorizontalAlignment="Left" Margin="355,3119,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <TextBox x:Name="DecomisadoAcumulado" HorizontalAlignment="Left" Margin="570,3119,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="355,3159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Rectangle HorizontalAlignment="Left" Height="40" Margin="570,3159,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Button Content="Submit" HorizontalAlignment="Left" Margin="595,3219,0,0" VerticalAlignment="Top" Height="35" Width="175" FontSize="19" Background="#FF3A5FFC" Click="Button_Click"/>
+            <Button Content="Update" HorizontalAlignment="Left" Margin="380,3219,0,0" VerticalAlignment="Top" Height="35" Width="175" Background="#FF7919C3" FontSize="20" Click="Button_Click_3"/>
+            <Button Content="Regresar" HorizontalAlignment="Left" Margin="25,3219,0,0" VerticalAlignment="Top" Height="35" Width="175" Background="#FFE51E1E" FontSize="20" Click="Button_Click_2"/>
+            <TextBox x:Name="OtrosAcumulado" HorizontalAlignment="Left" Margin="570,1119,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="40"/>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="EventDataMaker.CrearOpciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventDataMaker"
+        mc:Ignorable="d"
+        Title="CrearOpciones" Height="450" Width="800">
+    <Grid Background="#FF413FB7">
+        <Label Content="Cual de los dos tablas te gustaria crear?" HorizontalAlignment="Left" Margin="185,84,0,0" VerticalAlignment="Top" Height="50" Width="470" FontWeight="Bold" FontStyle="Normal" FontSize="27" FontFamily="Times New Roman"/>
+        <RadioButton x:Name="SemanaRadioBtn" Content="Tabla de semana" HorizontalAlignment="Left" Margin="160,214,0,0" VerticalAlignment="Top" Height="35" Width="200" FontSize="24" FontFamily="Times New Roman"/>
+        <RadioButton x:Name="AtendenciaRadioBtn" Content="Tabla de Atendencia" HorizontalAlignment="Left" Margin="450,214,0,0" VerticalAlignment="Top" Height="35" Width="240" FontSize="24" FontFamily="Times New Roman"/>
+        <Button Content="Continue" HorizontalAlignment="Left" Margin="630,359,0,0" VerticalAlignment="Top" Height="40" Width="110" FontSize="17" Click="Button_Click" Background="#FF03EEF3"/>
+        <Button x:Name="RegresarBTN" Content="Regresar" HorizontalAlignment="Left" Margin="60,359,0,0" VerticalAlignment="Top" Height="40" Width="110" FontSize="17" Click="Button_Click_Regresar" Background="#FFFA0606"/>
+
+    </Grid>
+</Window>
